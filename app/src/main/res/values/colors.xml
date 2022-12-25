@@ -12,5 +12,6 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="loadingBackground">#80FFFFFF</color>
     <color name="fragmentBackground">#FFFFFF</color>
+    <color name="card_blue_bg">#4D03A9F4</color>
 
 </resources>
