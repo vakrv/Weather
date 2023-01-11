@@ -1,17 +1,7 @@
 package weather.model
 
 class RepositoryImpl : Repository {
-
-    override fun getWeatherFromServer(): Weather {
-        return Weather()
-    }
-
-    override fun getWeatherFromLocalStorageRus(): List<Weather> {
-        return getRussianCities()
-    }
-
-    override fun getWeatherFromLocalStorageWorld(): List<Weather> {
-        return getWorldCities()
-    }
-
+    override fun getWeatherFromServer(): Weather = Weather()
+    override fun getWeatherFromLocalStorageRus(): List<Weather>  = getRussianCities()
+    override fun getWeatherFromLocalStorageWorld(): List<Weather> =  getWorldCities()
 }
