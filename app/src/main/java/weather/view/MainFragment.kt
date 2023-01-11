@@ -37,7 +37,6 @@ class MainFragment : Fragment() {
                     .add(R.id.container, DetailsFragment.newInstance(Bundle().apply {
                         putParcelable(DetailsFragment.BUNDLE_EXTRA, weather)
                     }))
-
                     .addToBackStack("")
                     .commitAllowingStateLoss()
             }

@@ -43,7 +43,6 @@ class MainFragmentAdapter(private var onItemViewClickListener: MainFragment.OnIt
     inner class MainViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         fun bind(weather: Weather) {
-<<<<<<< HomeWork4
 
             itemView.apply {
                 findViewById<TextView>(R.id.mainFragmentRecyclerItemTextView).text =
@@ -57,12 +56,7 @@ class MainFragmentAdapter(private var onItemViewClickListener: MainFragment.OnIt
                 itemView.setOnClickListener {
                     onItemViewClickListener?.onItemViewClick(weather)
                 }
-=======
-            itemView.findViewById<TextView>(R.id.mainFragmentRecyclerItemTextView).text =
-                weather.city.city
-            itemView.setOnClickListener {
-                onItemViewClickListener?.onItemViewClick(weather)
->>>>>>> master
+
             }
         }
     }
