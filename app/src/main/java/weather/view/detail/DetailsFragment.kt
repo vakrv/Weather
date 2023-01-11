@@ -52,8 +52,6 @@ class DetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-
         weatherBundle = arguments?.getParcelable<Weather>(BUNDLE_EXTRA)?: Weather()
 
         with(binding){
@@ -70,7 +68,6 @@ class DetailsFragment : Fragment() {
 
         _binding = null
     }
-
     private fun displayWeather( weatherDTO: WeatherDTO) {
         with(binding) {
             mainView.visibility = View.VISIBLE

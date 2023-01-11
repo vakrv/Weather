@@ -56,6 +56,7 @@ class MainFragmentAdapter(private var onItemViewClickListener: MainFragment.OnIt
                 itemView.setOnClickListener {
                     onItemViewClickListener?.onItemViewClick(weather)
                 }
+
             }
         }
     }
