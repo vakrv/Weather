@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.weather.R
 import com.example.weather.databinding.FragmentDetailsBinding
+import com.google.android.material.snackbar.Snackbar
 import weather.model.Weather
 import weather.model.WeatherDTO
 
@@ -25,7 +26,7 @@ class DetailsFragment : Fragment() {
                 displayWeather(weather)
             }
             override fun onFailed(throwable: Throwable) {
-                //
+                Snackbar.make(binding.root, "Что-то пошло не так...", Snackbar.LENGTH_SHORT).show()
             }
         }
 

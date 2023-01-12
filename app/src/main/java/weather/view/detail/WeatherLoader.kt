@@ -18,20 +18,17 @@ class WeatherLoader(
     private val listener: WeatherLoaderListener,
     private val lat: Double,
     private val lon: Double,
-    private val  WEATHER_API_KEY: String = "fed66a19-9144-4fc4-bb72-cd687dd16181"
+    private val  WEATHER_API_KEY: String = "c03b006c-7642-4169-add6-0c41353f764f"
 ) {
     interface WeatherLoaderListener {
         fun onLoaded(weather: WeatherDTO)
         fun onFailed(throwable: Throwable)
     }
 
-    @RequiresApi(Build.VERSION_CODES.N)
     fun loadWeather() =
-
         try {
-
             val uri =
-                URL("https://api.weather.yandex.ru/v2/informers?lat=${lat}&lon=${lon}")
+                URL("https://api.weather.yandex.ru/v2/forecst?lat=${lat}&lon=${lon}")
             val handler = Handler()
             Thread {
 
@@ -72,7 +69,6 @@ class WeatherLoader(
         }
 }
 
-@RequiresApi(Build.VERSION_CODES.N)
 private fun getLines(reader: BufferedReader): String {
     return reader.lines().collect(Collectors.joining("\n"))
 }
