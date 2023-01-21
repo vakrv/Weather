@@ -14,6 +14,7 @@ import weather.model.Weather
 import weather.view.detail.DetailsFragment
 import weather.viewmodel.AppState
 import weather.viewmodel.MainViewModel
+import java.util.Base64
 
 class MainFragment : Fragment() {
 
